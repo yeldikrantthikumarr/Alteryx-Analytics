@@ -1,0 +1,367 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2019.1">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="54" y="54" width="804" height="96" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text><![CDATA[Creating a BATCH MACRO Work flow,  
+
+User has to enter "factor" value to compute "MULTIPLICATION" operation on Average Amount Column (Avg_Collected).
+
+USER can change the "factor" value as per the requirement.
+
+Eg: Here it is mentioned as 1.5 , one can change to desired value.
+]]></Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
+        <Position x="126" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UseFileInput value="True" />
+          <Name>Input</Name>
+          <Abbrev>I</Abbrev>
+          <ShowFieldMap value="True" />
+          <Optional value="False" />
+          <FileInput>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="0">C:\Users\DELL-pc\Desktop\output_alteryx.csv</File>
+              <FormatSpecificOptions>
+                <CodePage>28591</CodePage>
+                <Delimeter>,</Delimeter>
+                <IgnoreErrors>False</IgnoreErrors>
+                <FieldLen>254</FieldLen>
+                <AllowShareWrite>False</AllowShareWrite>
+                <HeaderRow>True</HeaderRow>
+                <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+                <ImportLine>1</ImportLine>
+              </FormatSpecificOptions>
+            </Configuration>
+          </FileInput>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>output_alteryx.csv</DefaultAnnotationText>
+          <Left value="True" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Field_1" size="254" source="File: C:\Users\DELL-pc\Desktop\output_alteryx.csv" type="V_String" />
+            <Field name="Total Collected - April" size="254" source="File: C:\Users\DELL-pc\Desktop\output_alteryx.csv" type="V_String" />
+            <Field name="Transactions -April" size="254" source="File: C:\Users\DELL-pc\Desktop\output_alteryx.csv" type="V_String" />
+            <Field name="Total Collected - May" size="254" source="File: C:\Users\DELL-pc\Desktop\output_alteryx.csv" type="V_String" />
+            <Field name="Transactions - May" size="254" source="File: C:\Users\DELL-pc\Desktop\output_alteryx.csv" type="V_String" />
+            <Field name="Total Collected - June" size="254" source="File: C:\Users\DELL-pc\Desktop\output_alteryx.csv" type="V_String" />
+            <Field name="Transactions - June" size="254" source="File: C:\Users\DELL-pc\Desktop\output_alteryx.csv" type="V_String" />
+            <Field name="Total Collected - July" size="254" source="File: C:\Users\DELL-pc\Desktop\output_alteryx.csv" type="V_String" />
+            <Field name="Transactions - July" size="254" source="File: C:\Users\DELL-pc\Desktop\output_alteryx.csv" type="V_String" />
+            <Field name="Total Collected - August" size="254" source="File: C:\Users\DELL-pc\Desktop\output_alteryx.csv" type="V_String" />
+            <Field name="Transactions - August" size="254" source="File: C:\Users\DELL-pc\Desktop\output_alteryx.csv" type="V_String" />
+            <Field name="Total Collected -September" size="254" source="File: C:\Users\DELL-pc\Desktop\output_alteryx.csv" type="V_String" />
+            <Field name="Transactions - September" size="254" source="File: C:\Users\DELL-pc\Desktop\output_alteryx.csv" type="V_String" />
+            <Field name="Avg_Collected" size="254" source="File: C:\Users\DELL-pc\Desktop\output_alteryx.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="402" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[Avg_Collected]*1.50" field="Factor" size="8" type="Double" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Factor = [Avg_Collected]*1.50
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Field_1" size="254" source="File: C:\Users\DELL-pc\Desktop\output_alteryx.csv" type="V_String" />
+            <Field name="Total Collected - April" size="254" source="File: C:\Users\DELL-pc\Desktop\output_alteryx.csv" type="V_String" />
+            <Field name="Transactions -April" size="254" source="File: C:\Users\DELL-pc\Desktop\output_alteryx.csv" type="V_String" />
+            <Field name="Total Collected - May" size="254" source="File: C:\Users\DELL-pc\Desktop\output_alteryx.csv" type="V_String" />
+            <Field name="Transactions - May" size="254" source="File: C:\Users\DELL-pc\Desktop\output_alteryx.csv" type="V_String" />
+            <Field name="Total Collected - June" size="254" source="File: C:\Users\DELL-pc\Desktop\output_alteryx.csv" type="V_String" />
+            <Field name="Transactions - June" size="254" source="File: C:\Users\DELL-pc\Desktop\output_alteryx.csv" type="V_String" />
+            <Field name="Total Collected - July" size="254" source="File: C:\Users\DELL-pc\Desktop\output_alteryx.csv" type="V_String" />
+            <Field name="Transactions - July" size="254" source="File: C:\Users\DELL-pc\Desktop\output_alteryx.csv" type="V_String" />
+            <Field name="Total Collected - August" size="254" source="File: C:\Users\DELL-pc\Desktop\output_alteryx.csv" type="V_String" />
+            <Field name="Transactions - August" size="254" source="File: C:\Users\DELL-pc\Desktop\output_alteryx.csv" type="V_String" />
+            <Field name="Total Collected -September" size="254" source="File: C:\Users\DELL-pc\Desktop\output_alteryx.csv" type="V_String" />
+            <Field name="Transactions - September" size="254" source="File: C:\Users\DELL-pc\Desktop\output_alteryx.csv" type="V_String" />
+            <Field name="Avg_Collected" scale="0" size="254" source="File: C:\Users\DELL-pc\Desktop\output_alteryx.csv" type="FixedDecimal" />
+            <Field name="Factor" source="Formula: [Avg_Collected]*1.50" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="258" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Avg_Collected" selected="True" type="FixedDecimal" size="254.0" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Field_1" size="254" source="File: C:\Users\DELL-pc\Desktop\output_alteryx.csv" type="V_String" />
+            <Field name="Total Collected - April" size="254" source="File: C:\Users\DELL-pc\Desktop\output_alteryx.csv" type="V_String" />
+            <Field name="Transactions -April" size="254" source="File: C:\Users\DELL-pc\Desktop\output_alteryx.csv" type="V_String" />
+            <Field name="Total Collected - May" size="254" source="File: C:\Users\DELL-pc\Desktop\output_alteryx.csv" type="V_String" />
+            <Field name="Transactions - May" size="254" source="File: C:\Users\DELL-pc\Desktop\output_alteryx.csv" type="V_String" />
+            <Field name="Total Collected - June" size="254" source="File: C:\Users\DELL-pc\Desktop\output_alteryx.csv" type="V_String" />
+            <Field name="Transactions - June" size="254" source="File: C:\Users\DELL-pc\Desktop\output_alteryx.csv" type="V_String" />
+            <Field name="Total Collected - July" size="254" source="File: C:\Users\DELL-pc\Desktop\output_alteryx.csv" type="V_String" />
+            <Field name="Transactions - July" size="254" source="File: C:\Users\DELL-pc\Desktop\output_alteryx.csv" type="V_String" />
+            <Field name="Total Collected - August" size="254" source="File: C:\Users\DELL-pc\Desktop\output_alteryx.csv" type="V_String" />
+            <Field name="Transactions - August" size="254" source="File: C:\Users\DELL-pc\Desktop\output_alteryx.csv" type="V_String" />
+            <Field name="Total Collected -September" size="254" source="File: C:\Users\DELL-pc\Desktop\output_alteryx.csv" type="V_String" />
+            <Field name="Transactions - September" size="254" source="File: C:\Users\DELL-pc\Desktop\output_alteryx.csv" type="V_String" />
+            <Field name="Avg_Collected" scale="0" size="254" source="File: C:\Users\DELL-pc\Desktop\output_alteryx.csv" type="FixedDecimal" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="594" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Output</Name>
+          <Abbrev>O</Abbrev>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.TextBox.QuestionTextBox">
+        <Position x="318" y="162" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
+        <Position x="366" y="210" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="8" Connection="Action" />
+      <Destination ToolID="4" Connection="Action" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="7" Connection="Question" />
+      <Destination ToolID="8" Connection="Question" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <Constants>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Macro Input (3)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Macro Output (6)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Text Box (7)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+    </Constants>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Batch_Macro_FactorValue</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+    <RuntimeProperties>
+      <Actions>
+        <NoCondition>
+          <Type>NoCondition</Type>
+          <Description>(Always Run)</Description>
+          <True>
+            <Action>
+              <Type>UpdateValue</Type>
+              <Description />
+              <ToolId value="8" />
+              <Mode>Simple</Mode>
+              <Variable />
+              <Replace value="True" />
+              <ReplaceText>1.50</ReplaceText>
+              <Destination>4</Destination>
+            </Action>
+          </True>
+        </NoCondition>
+      </Actions>
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (2)</Name>
+          <ToolId value="2" />
+          <Questions>
+            <Question>
+              <Type>MacroInput</Type>
+              <Description>Macro Input (3)</Description>
+              <Name>Macro Input (3)</Name>
+              <ToolId value="3" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description>Macro Output (6)</Description>
+              <Name>Macro Output (6)</Name>
+              <ToolId value="6" />
+            </Question>
+            <Question>
+              <Type>TextBox</Type>
+              <Description>Please change factor value</Description>
+              <Name>Text Box (7)</Name>
+              <ToolId value="7" />
+              <Default />
+              <Password value="False" />
+              <Multiline value="False" />
+              <Hidden value="False" />
+            </Question>
+          </Questions>
+        </Question>
+      </Questions>
+      <ModuleType>Macro</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImageStd value="39" />
+      <MacroInputs />
+      <MacroOutputs />
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="3" Selected="True" />
+        <Tool ToolId="6" Selected="True" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>
